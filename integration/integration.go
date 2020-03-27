@@ -66,6 +66,7 @@ func (c *Client) ForceUpdateAllFields(context context.Context, request *UpdateIn
 	request.OtherFields["ignoreRespondersFromPayload"] = request.IgnoreRespondersFromPayload
 	request.OtherFields["suppressNotifications"] = request.SuppressNotifications
 	request.OtherFields["responders"] = request.Responders
+	request.OtherFields["ownerTeam"] = request.OwnerTeam
 	request.OtherFields["emailUsername"] = request.EmailUsername
 	err := c.client.Exec(context, request.OtherFields, result)
 	if err != nil {
